@@ -15,4 +15,5 @@ int main() {
     Measurement{21.1},   Measurement{18.7},   Measurement{19.6},
     Measurement{22.3},   Measurement{20.1},
   };
+  std::cout << measurements.size() << '\n';
 }
