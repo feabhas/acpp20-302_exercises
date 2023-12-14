@@ -13,9 +13,15 @@ jobs:
             - name: checkout
               uses: actions/checkout@v4
               with:
-                sparse-checkout: solutions
-                fetch-depth: 1               
-            - name: build  
+                sparse-checkout: exercises
+                fetch-depth: 1
+            - name: build datalogger template
+              run: |
+                cp -r /home/feabhas/projects/cmake-host .
+                cp -r exercises/templates/datalogger/* cmake-host
+                cd cmake-host
+                bash ./build.sh                   
+            - name: build solutions
               run: |
                 cp -r /home/feabhas/projects/cmake-host .
                 cd cmake-host
