@@ -1,6 +1,8 @@
-# AC++20-302 Exercises
+# Migrating to C++20/23 Exercises
 
-Exercise solutions and cmake projects for the AC++20-302 course.
+Exercise solutions and cmake projects for:
+
+   * AC++20-302 Migrating to C++20/23
 
 # Exercises
 
