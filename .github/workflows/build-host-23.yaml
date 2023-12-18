@@ -15,14 +15,17 @@ jobs:
               with:
                 sparse-checkout: exercises
                 fetch-depth: 1
-            - name: build datalogger template
+            - name: create workspace
               run: |
                 cp -r /home/feabhas/projects/cmake-host .
                 sed -i '/CMAKE_CXX_STANDARD 17/s/17/23/' cmake-host/CMakeLists.txt
-                cp -r exercises/templates/datalogger/* cmake-host
+            - name: build datalogger template
+              run: |
+                cp -rf exercises/templates/datalogger/* cmake-host
                 cd cmake-host
                 bash ./build.sh                  
             - name: build solutions
               run: |
                 cd cmake-host
-                bash ./build-one.sh --all    
+                bash ./build-one.sh --all
+               
