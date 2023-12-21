@@ -4,6 +4,27 @@ Exercise solutions and cmake projects for:
 
    * AC++20-302 Migrating to C++20/23
 
+**Contents**
+- [Migrating to C++20/23 Exercises](#migrating-to-c2023-exercises)
+- [Exercises](#exercises)
+  - [Templates](#templates)
+  - [Solutions](#solutions)
+- [Examples](#examples)
+- [Build Toolchain](#build-toolchain)
+  - [Build the application](#build-the-application)
+  - [Visual Studio shortcuts](#visual-studio-shortcuts)
+  - [Command line builds](#command-line-builds)
+  - [Building an exercise solution](#building-an-exercise-solution)
+- [Workspaces](#workspaces)
+  - [host-gcc](#host-gcc)
+  - [host-clang](#host-clang)
+  - [host-msvc](#host-msvc)
+- [Notes](#notes)
+  - [Compiler/Linker options for C++20](#compilerlinker-options-for-c20)
+  - [Coroutines](#coroutines)
+  - [Modules](#modules)
+- [Disclaimer](#disclaimer)
+
 # Exercises
 
 ## Templates
