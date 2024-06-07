@@ -1,4 +1,4 @@
-﻿# CMakeList.txt : CMake project for Application, include source and define
+# CMakeList.txt : CMake project for Application, include source and define
 # project specific logic here.
 #
 cmake_minimum_required (VERSION 3.16)
@@ -50,6 +50,21 @@ add_compile_definitions(
 # add_library(modules OBJECT 
 #   src/alarm.ixx
 #   src/handler.ixx
+#)
+
+# add_library(modules OBJECT 
+#   src/alarm.ixx
+#   src/constraints.ixx
+#   src/templates.ixx
+# )
+
+# add_library(modules OBJECT 
+#   src/morning.ixx
+#   src/evening.ixx
+# )
+
+# add_library(modules OBJECT 
+#    ${CMAKE_SOURCE_DIR}/src/greet.ixx
 # )
 
 if (TARGET modules)

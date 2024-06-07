@@ -1,4 +1,4 @@
-// alarm-base.cpp
+// alarm.cpp
 // See project README.md for disclaimer and additional information.
 // Feabhas Ltd
 
@@ -6,9 +6,7 @@ module;
 
 #include <iostream>
 
-// module Alarm:Base;
-// g++ 12.1 implementation
-module Alarm:Base;
+module Alarms;
 
 namespace Alarms
 {
@@ -16,7 +14,8 @@ namespace Alarms
   : type{type}, status{status}
   {}
 
-  void Alarm::reset() {
+  void Alarm::reset() 
+  {
     status = false;
   }
 

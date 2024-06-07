@@ -2,7 +2,7 @@
 // See project README.md for disclaimer and additional information.
 // Feabhas Ltd
 
-module Alarm;
+module Alarm:Helper;
 
 namespace Alarms
 {

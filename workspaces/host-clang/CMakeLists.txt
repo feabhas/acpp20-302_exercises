@@ -52,6 +52,21 @@ add_compile_definitions(
 #   src/handler.ixx
 # )
 
+# add_library(modules OBJECT 
+  # src/alarm.ixx
+  # src/constraints.ixx
+  # src/templates.ixx
+# )
+
+# add_library(modules OBJECT 
+#   src/morning.ixx
+#   src/evening.ixx
+# )
+
+# add_library(modules OBJECT 
+#    ${CMAKE_SOURCE_DIR}/src/greet.ixx
+# )
+
 if (TARGET modules)
   target_include_directories(modules PRIVATE
     ${CMAKE_SOURCE_DIR}/src

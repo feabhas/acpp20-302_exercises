@@ -3,6 +3,6 @@ import :Base;
 
 export namespace Alarms 
 {
-  extern const char* type_names[];
+  const char* type_names[];
 }
 
