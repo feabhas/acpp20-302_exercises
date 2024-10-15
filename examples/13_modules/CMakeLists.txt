@@ -32,12 +32,23 @@ add_compile_definitions(
 )
 
 # TODO: uncomment the following target modules directive when
-# working with modules
+# working with example modules
 
 # add_library(modules OBJECT 
 #   src/MeasurementType.ixx 
 #   src/Measurement.ixx
 #   src/Measurements.ixx
+# )
+
+# add_library(modules OBJECT 
+#   src/alarm.ixx
+#   src/constraints.ixx
+#   src/templates.ixx
+# )
+
+# add_library(modules OBJECT 
+#   src/morning.ixx
+#   src/evening.ixx
 # )
 
 # add_library(modules OBJECT 
@@ -47,10 +58,14 @@ add_compile_definitions(
 #   src/alarm.ixx
 # )
 
-add_library(modules OBJECT 
-  src/alarm.ixx
-  src/handler.ixx
-)
+# add_library(modules OBJECT 
+#   src/alarm.ixx
+#   src/handler.ixx
+# )
+
+# add_library(modules OBJECT 
+#   src/greet.ixx
+# )
 
 if (TARGET modules)
   target_include_directories(modules PRIVATE
