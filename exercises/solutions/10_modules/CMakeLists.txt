@@ -40,18 +40,6 @@ add_library(modules OBJECT
   src/Measurements.ixx
 )
 
-# add_library(modules OBJECT 
-#   src/alarm-base.ixx
-#   src/alarm-helper.ixx
-#   src/alarm-extra.ixx
-#   src/alarm.ixx
-# )
-
-# add_library(modules OBJECT 
-#   src/alarm.ixx
-#   src/handler.ixx
-# )
-
 if (TARGET modules)
   target_include_directories(modules PRIVATE
     ${CMAKE_SOURCE_DIR}/src
