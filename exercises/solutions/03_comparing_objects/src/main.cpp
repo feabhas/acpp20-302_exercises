@@ -27,5 +27,6 @@ int main()
     assert(Measurement{1.002} > Measurement{1.0});
 
     assert((Measurement{1.0} <=> Measurement{NAN}) == std::partial_ordering::unordered);
+    
     return 0;
 }

@@ -30,7 +30,7 @@ namespace DataLogger
     { t.add(typename T::value_type{}) };
     { t.size() } -> std::same_as<size_t>;
     { t.data() } -> std::same_as<std::vector<typename T::measurement_type>>;
-    { t.summary() } -> std::same_as<std::tuple<std::string_view, MeasurementType, size_t>>;
+    { t.summary() } -> std::same_as<std::tuple<std::string, MeasurementType, size_t>>;
   };
 }
 

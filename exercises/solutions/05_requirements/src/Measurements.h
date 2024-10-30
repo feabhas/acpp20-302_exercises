@@ -35,7 +35,7 @@ namespace DataLogger
     void add(value_type value);
 
     std::vector<T> data() const;
-	std::tuple<std::string_view, MeasurementType, size_t> summary() const;
+	std::tuple<std::string, MeasurementType, size_t> summary() const;
 
     size_t size() const {
       return measures.size();
@@ -73,7 +73,7 @@ namespace DataLogger
       std::is_copy_assignable_v<T> &&
       requires (T x) { x.get_value(); } &&
       requires (T x, T y) { x < y; }
-  std::tuple<std::string_view, MeasurementType, size_t> Measurements<T>::summary() const
+  std::tuple<std::string, MeasurementType, size_t> Measurements<T>::summary() const
   {
       return {id, type, measures.size()};
   }

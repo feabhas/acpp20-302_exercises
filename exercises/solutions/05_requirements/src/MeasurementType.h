@@ -14,7 +14,7 @@ namespace DataLogger
 {
   enum class MeasurementType {unknown, temperature, pressure, minT, maxT};
 
-  constexpr std::string_view to_string(MeasurementType type) {
+  constexpr std::string to_string(MeasurementType type) {
     constexpr std::array names {
       "unknown", "temperature", "pressure", "minT", "maxT"
     };

@@ -28,7 +28,7 @@ namespace DataLogger
     void add(value_type value);
 
     std::vector<T> data() const;
-	  std::tuple<std::string_view, MeasurementType, size_t> summary() const;
+	  std::tuple<std::string, MeasurementType, size_t> summary() const;
 
     size_t size() const {
       return measures.size();
@@ -51,7 +51,7 @@ namespace DataLogger
   }
 
   template<typename T>
-  std::tuple<std::string_view, MeasurementType, size_t> Measurements<T>::summary() const
+  std::tuple<std::string, MeasurementType, size_t> Measurements<T>::summary() const
   {
       return {id, type, measures.size()};
   }

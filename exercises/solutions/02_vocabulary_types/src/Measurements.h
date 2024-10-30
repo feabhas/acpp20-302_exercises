@@ -18,7 +18,7 @@ namespace DataLogger
   {
   public:
     using value_type = Measurement::value_type;
-    using add_type = std::variant<double, std::string_view>;
+    using add_type = std::variant<double, std::string>;
 
     Measurements(std::string_view id, MeasurementType type)
     : id{id}, type{type}
@@ -30,7 +30,7 @@ namespace DataLogger
     inline bool add(add_type value);
 
     inline std::vector<Measurement> data() const;
-	inline std::tuple<std::string_view, MeasurementType, size_t> summary() const;
+	inline std::tuple<std::string, MeasurementType, size_t> summary() const;
 
     size_t size() const {
       return measures.size();
@@ -52,7 +52,7 @@ namespace DataLogger
         add(*dp);
         return true;
     }
-    else if(auto* sv = std::get_if<std::string_view>(&value); sv != nullptr) {
+    else if(auto* sv = std::get_if<std::string>(&value); sv != nullptr) {
       char* end {};
       if (double d = std::strtod( sv->data(), &end ); end != sv->data()) {
         add(d);
@@ -66,7 +66,7 @@ namespace DataLogger
     return measures;
   }
 
-  std::tuple<std::string_view, MeasurementType, size_t> Measurements::summary() const
+  std::tuple<std::string, MeasurementType, size_t> Measurements::summary() const
   {
       return {id, type, measures.size()};
   }

@@ -15,7 +15,6 @@
 // -----------------------------------------------------------------------------
 module;
 #include <cstddef>
-// #include <string_view>
 #include <array>
 export module MeasurementType;
 
@@ -23,7 +22,6 @@ export namespace DataLogger
 {
   enum class MeasurementType {unknown, temperature, pressure, minT, maxT};
 
-  // gcc 13.1 fails to compile if return type is std::string_view
   constexpr const char* to_string(MeasurementType type) {
     constexpr std::array names {
       "unknown", "temperature", "pressure", "minT", "maxT"
